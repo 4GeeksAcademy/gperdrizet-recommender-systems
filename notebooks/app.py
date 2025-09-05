@@ -39,8 +39,8 @@ if __name__ == '__main__':
 
     # Load the assets
     model = pickle.load(open(f'{working_directory}/models/model.pkl', 'rb'))
-    tfidf_matrix = pickle.load(open(f'{working_directory}/data/tfidf_matrix.pkl', 'rb'))
-    encoded_data_df = pickle.load(open(f'{working_directory}/data/encoded_features_df.pkl', 'rb'))
+    tfidf_matrix = pickle.load(open(f'{working_directory}/data/processed/tfidf_matrix.pkl', 'rb'))
+    encoded_data_df = pickle.load(open(f'{working_directory}/data/processed/encoded_features_df.pkl', 'rb'))
 
     # Loop until user breaks
     while True:
