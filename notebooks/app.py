@@ -26,7 +26,7 @@ def set_project_root() -> None:
     '''Set the current working directory to project root.'''
     
     current_directory = Path.cwd()
-    working_directory = current_directory.parent if current_directory.name == 'src' else current_directory
+    working_directory = current_directory.parent if current_directory.name == 'notebooks' else current_directory
 
     print(f'Working directory: {working_directory}')
 
@@ -40,7 +40,7 @@ if __name__ == '__main__':
     # Load the assets
     model = pickle.load(open(f'{working_directory}/models/model.pkl', 'rb'))
     tfidf_matrix = pickle.load(open(f'{working_directory}/data/processed/tfidf_matrix.pkl', 'rb'))
-    encoded_data_df = pickle.load(open(f'{working_directory}/data/processed/encoded_features_df.pkl', 'rb'))
+    encoded_data_df = pickle.load(open(f'{working_directory}/data/processed/tag_title_df.pkl', 'rb'))
 
     # Loop until user breaks
     while True:
